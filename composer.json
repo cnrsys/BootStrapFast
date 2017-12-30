@@ -23,6 +23,10 @@
     "vlucas/phpdotenv": "^2.4.0",
     "wpackagist-plugin/pantheon-advanced-page-cache": "^0.1.4",
     "wpackagist-plugin/wp-native-php-sessions": "^0.6.0",
+    "wpackagist-plugin/theme-check": "dev-trunk",
+    "wpackagist-plugin/wordpress-importer": "dev-trunk",
+    "wpackagist-plugin/debug-bar": "dev-trunk",
+    "wpackagist-plugin/query-monitor": "dev-trunk",
     "wpackagist-theme/twentyseventeen": "^1.1"
   },
   "require-dev": {
@@ -70,7 +74,7 @@
     ],
     "prepare-for-pantheon": "WordPressProject\\composer\\ScriptHandler::prepareForPantheon",
     "cleanup": [
-      "./scripts/composer/cleanup-composer"
+      "./scripts/composer/cleanup-http://dev-bootstrapfast.pantheonsite.io/composer"
     ],
     "post-install-cmd": [
       "@cleanup",
@@ -87,7 +91,9 @@
     "code-sniff": [
       "pwd",
       "./vendor/bin/phpcs --config-set installed_paths ~/example_wordpress_composer/vendor/wp-coding-standards/wpcs/",
-      "./vendor/bin/phpcs --standard=WordPress ./web/wp-content"
+      "./vendor/bin/phpcs --version",
+      "./vendor/bin/phpcs -i",
+      "./vendor/bin/phpcs --ignore=*/src/*,*/inc/*,*gulpfile.js*,*/assets/* --standard=WordPress ./web/wp-content"
     ],
     "unit-test": [
       "./vendor/bin/phpunit tests/unit/*"
