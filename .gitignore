@@ -40,6 +40,20 @@ web/private/scripts/quicksilver
 
 .localnotes
 
+.gitignore
+wp-config.php
+!web/wp-content/themes/bootstrapfast/*
+!web/wp-content/themes/bootstrapfast
+!web/wp-content/themes/bootstrapfast/*.*
+!web/wp-content/themes/bootstrapfast/**/*
+!web/wp-content/themes/bootstrapfast/**/*
+web/wp-content/themes/bootstrapfast/node_modules
+web/wp-content/themes/bootstrapfast/node_modules/**/*
+web/wp-content/themes/bootstrapfast/bower_components
+web/wp-content/themes/bootstrapfast/node_modules/**/*
+!.editorconfig
+
+
 # :::::::::::::::::::::: cut ::::::::::::::::::::::
 
 ###
