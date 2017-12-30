@@ -1,0 +1,7 @@
+name: bootstrapfast
+recipe: pantheon
+config:
+  framework: wordpress
+  site: bootstrapfast
+  id: f916572b-745e-44d1-b2a3-5ae6896b13ac
+  webroot: web
