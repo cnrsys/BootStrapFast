@@ -74,7 +74,7 @@
     ],
     "prepare-for-pantheon": "WordPressProject\\composer\\ScriptHandler::prepareForPantheon",
     "cleanup": [
-      "./scripts/composer/cleanup-http://dev-bootstrapfast.pantheonsite.io/composer"
+      "./scripts/composer/cleanup-composer"
     ],
     "post-install-cmd": [
       "@cleanup",
