@@ -28,7 +28,7 @@
     }
   },
   "config": {
-    "devUrl": "http://bootstrapfastdemo.lndo.site"
+    "devUrl": "http://bootstrapfast.lndo.site/"
   },
 	"paths": {
 		"dist": "assets/",

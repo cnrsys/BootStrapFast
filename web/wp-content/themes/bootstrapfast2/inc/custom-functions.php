@@ -27,7 +27,7 @@ function bootstrapfast_theme_prefix_setup() {
  */
 function bootstrapfast_get_the_logo_url() {
 	$custom_logo_id = get_theme_mod( 'custom_logo' );
-	$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+	$image          = wp_get_attachment_image_src( $custom_logo_id, 'full' );
 	if ( $custom_logo_id ) {
 		return $image[0];
 	} else {

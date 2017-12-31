@@ -173,8 +173,15 @@ endif;
 /*
 * Define wp-content directory outside of WordPress core directory
 */
+
+
+#define( 'WP_HOME' , 'http://bootstrapfast.lndo.site/' );
+
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content' );
 define( 'WP_CONTENT_URL', WP_HOME . '/wp-content' );
+
+#define('WP_SITEURL', 'http://bootstrapfast.lndo.site');
+define('UBP_SITEURL', 'http://bootstrapfast.lndo.site');
 
 /**
  * WordPress Database Table prefix.
