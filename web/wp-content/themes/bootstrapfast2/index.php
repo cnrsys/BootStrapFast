@@ -14,14 +14,15 @@ get_header(); ?>
 
 			<?php if ( get_header_image() ) { ?>
 				<div class="headercontainer">
-					<img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+					<img src="<?php echo( esc_html( get_header_image() ) ); ?>" alt="<?php echo( esc_html( get_bloginfo( 'title' ) ) ); ?>" />
 				</div>
 			<?php } ?>
 
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) : ?>
+			if ( is_home() && ! is_front_page() ) :
+				?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
@@ -30,7 +31,8 @@ get_header(); ?>
 			endif;
 
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -47,7 +49,8 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif;
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

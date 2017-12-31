@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/styles/editor-style.scss"],"names":[],"mappings":"AAAA,uBACI,uCAA0C,AAC1C,WAAa,CAChB,AAED,yBACI,aAAe,CAClB","file":"editor-style.min.css","sourcesContent":["body#tinymce.wp-editor {\n    font-family: Arial, Helvetica, sans-serif;\n    margin: 10px;\n}\n\nbody#tinymce.wp-editor a {\n    color: #4CA6CF;\n}\n"],"sourceRoot":"assets/css/"}
