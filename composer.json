@@ -26,6 +26,7 @@
     "wpackagist-plugin/theme-check": "dev-trunk",
     "wpackagist-plugin/wordpress-importer": "dev-trunk",
     "wpackagist-plugin/debug-bar": "dev-trunk",
+    "wpackagist-plugin/woocommerce": "^3.2.4",
     "wpackagist-plugin/query-monitor": "dev-trunk",
     "wpackagist-theme/twentyseventeen": "^1.1"
   },

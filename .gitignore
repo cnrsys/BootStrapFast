@@ -19,8 +19,8 @@ web/wp-content/mu-plugins/*
 !web/wp-content/mu-plugins/custom
 !web/wp-content/mu-plugins/.gitkeep
 !web/wp-content/plugins/
-web/wp-content/plugins/*
-!web/wp-content/plugins/custom/
+#web/wp-content/plugins/*
+#!web/wp-content/plugins/custom/
 !web/wp-content/plugins/.gitkeep
 #!web/wp-content/themes
 #web/wp-content/themes/*
@@ -50,6 +50,18 @@ web/wp-content/themes/bootstrapfast2/node_modules/**/*
 !web/wp-content/themes/bootstrapfast2/*.*
 !web/wp-content/themes/bootstrapfast2/**/*
 !.editorconfig
+
+#plugins local developed
+#do not include plugins from composer
+web/wp-content/plugins/pantheon-advanced-page-cache
+web/wp-content/plugins/query-monitor
+web/wp-content/plugins/theme-check
+web/wp-content/plugins/uploads-by-proxy
+web/wp-content/plugins/wordpress-importer
+web/wp-content/plugins/wp-native-php-sessions
+web/wp-content/plugins/debug-bar
+
+
 
 # :::::::::::::::::::::: cut ::::::::::::::::::::::
 
