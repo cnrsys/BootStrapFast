@@ -12,11 +12,17 @@
 3) Pantheon machine token
 4) Github token
 5) CircleCI token
+6) Node Version Manager & NodeJS
 
 ## Local setup to copy the
 
 1) Git clone this repo
-2) Lando start
+2) lando start
 3) lando terminus auth:login --machine-token=
-4) Lando pull --code=none --files=none --database=dev
+4) lando pull --code=none --files=none --database=dev
 5) `cd web/wp-content/themes/bootstrapfast` then `gulp watch`
+6) ``. ~/.nvm/nvm.sh` and `nvm use 8`
+7) Run npm install -g npm@latest
+8) Run npm install -g gulp bower
+9) Run npm install
+10) Run bower install
