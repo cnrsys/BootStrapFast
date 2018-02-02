@@ -41,15 +41,14 @@ web/private/scripts/quicksilver
 
 .gitignore
 web/wp-config.php
-!web/wp-content/themes/bootstrapfast2/node_modules
-!web/wp-content/themes/bootstrapfast2/node_modules/**/*
-web/wp-content/themes/bootstrapfast2/bower_components
-web/wp-content/themes/bootstrapfast2/node_modules/**/*
-!web/wp-content/themes/bootstrapfast2/*
-!web/wp-content/themes/bootstrapfast2
-!web/wp-content/themes/bootstrapfast2/*.*
-!web/wp-content/themes/bootstrapfast2/**/*
+!web/wp-content/themes/bootstrapfast/*
+!web/wp-content/themes/bootstrapfast
+!web/wp-content/themes/bootstrapfast/*.*
+!web/wp-content/themes/bootstrapfast/**/*
 !.editorconfig
+
+web/wp-content/themes/bootstrapfast/bower_components
+web/wp-content/themes/bootstrapfast/node_modules/**/*
 
 #plugins local developed
 #do not include plugins from composer
