@@ -26,3 +26,8 @@
 8) Run npm install -g gulp bower
 9) Run npm install
 10) Run bower install
+
+## Updating core, installing theme or plugins
+
+1) Update composer.json
+2) lando composer update
