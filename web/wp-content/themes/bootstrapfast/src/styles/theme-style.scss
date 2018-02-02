@@ -23,10 +23,16 @@
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
-// Automatically injected Bower dependencies via wiredep (never manually edit this block)
-// bower:scss
+// Bootstrap options
+// Use full bootstrap
 @import "../../bower_components/bootstrap/scss/bootstrap.scss";
-// endbower
+
+// Use grid only
+// @import "../../bower_components/bootstrap/scss/bootstrap-grid.scss";
+
+// Use reboot only
+// @import "../../bower_components/bootstrap/scss/bootstrap-grid.scss";
+
 
 /*--------------------------------------------------------------
 # Normalize
