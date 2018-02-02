@@ -8,7 +8,7 @@
     },
     "themestyle.min.css": {
       "files": [
-        "styles/themestyle.scss"
+        "styles/theme-style.scss"
       ],
       "main": true
     },
@@ -17,6 +17,11 @@
         "styles/editor-style.scss"
       ],
       "main": true
+    },
+    "woocommerce.min.css": {
+      "files": [
+        "styles/woocommerce.scss"
+      ]
     },
     "customizer.js": {
       "files": [
