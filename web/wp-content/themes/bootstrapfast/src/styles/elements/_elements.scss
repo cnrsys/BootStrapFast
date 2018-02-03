@@ -19,6 +19,8 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+@import "header";
+
 @import "lists";
 
 img {
@@ -36,6 +38,4 @@ figure {
 	padding: 1em 2em;
 }
 
-footer.site-footer {
-	text-align: center;
-}
+@import "footer";

@@ -19,35 +19,42 @@
 <body <?php body_class(); ?>>
 	<div class="<?php echo esc_attr( bootstrapfast_container_type() ); ?>">
 		<div class="row">
-			<header id="masthead" class="site-header col-xs-12 <?php echo esc_attr( bootstrapfast_main_header_style() ); ?>" role="banner">
-				<div class="site-branding">
-					<?php
-					if ( bootstrapfast_get_the_logo_url() ) {
-						?>
-						<div id="site-header">
-							<?php the_custom_logo(); ?>
-						</div>
+			<header id="masthead" class="container site-header col-xs-12 <?php echo esc_attr( bootstrapfast_main_header_style() ); ?>" role="banner">
+				<div class="row">
+					<div class="site-branding col-6">
 						<?php
-					} else {
-						if ( is_front_page() && is_home() ) {
+						if ( bootstrapfast_get_the_logo_url() ) {
 							?>
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<div id="site-header">
+								<?php the_custom_logo(); ?>
+							</div>
 							<?php
 						} else {
-							?>
-							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-							<?php
-						}
+							if ( is_front_page() && is_home() ) {
+								?>
+								<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+								<?php
+							} else {
+								?>
+								<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+								<?php
+							}
 
-						$description = get_bloginfo( 'description', 'display' );
-						if ( $description || is_customize_preview() ) {
-							?>
-							<p class="site-description"><?php echo esc_attr( $description ); ?></p>
-							<?php
+							$description = get_bloginfo( 'description', 'display' );
+							if ( $description || is_customize_preview() ) {
+								?>
+								<p class="site-description"><?php echo esc_attr( $description ); ?></p>
+								<?php
+							}
 						}
+						?>
+					</div><!-- .site-branding -->
+					<?php
+					if ( is_active_sidebar( 'top-sidebar-1' ) ) {
+						dynamic_sidebar( 'top-sidebar-1' );
 					}
 					?>
-				</div><!-- .site-branding -->
+				</div>
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bootstrapfast' ); ?></button>

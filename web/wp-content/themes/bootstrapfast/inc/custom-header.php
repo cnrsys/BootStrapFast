@@ -84,7 +84,8 @@ function bootstrapfast_customizer_css() {
 			}
 			?>
 		}
-		.main-navigation a {
+		.main-navigation a,
+		.textwidget a {
 			color: <?php echo esc_attr( get_theme_mod( 'navlink_color', '#fff' ) ); ?>;
 		}
 	</style>

@@ -29,11 +29,13 @@ if ( ! function_exists( 'bootstrapfast_posted_on' ) ) {
 		);
 
 		$posted_on = sprintf(
+			// translators: Posted tranlation.
 			esc_html_x( 'Posted on %s', 'post date', 'bootstrapfast' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
+			// translators: By post author tranlation.
 			esc_html_x( 'by %s', 'post author', 'bootstrapfast' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
@@ -53,12 +55,14 @@ if ( ! function_exists( 'bootstrapfast_entry_footer' ) ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'bootstrapfast' ) );
 			if ( $categories_list && bootstrapfast_categorized_blog() ) {
+				// translators: Posted in tranlation.
 				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bootstrapfast' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bootstrapfast' ) );
 			if ( $tags_list ) {
+				// translators: Tagged tranlation.
 				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'bootstrapfast' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
@@ -88,7 +92,8 @@ if ( ! function_exists( 'bootstrapfast_entry_footer' ) ) {
  * @return bool
  */
 function bootstrapfast_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'bootstrapfast_categories' ) ) ) {
+	$all_the_cool_cats = get_transient( 'bootstrapfast_categories' );
+	if ( false === $all_the_cool_cats ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -123,4 +128,4 @@ function bootstrapfast_category_transient_flusher() {
 	delete_transient( 'bootstrapfast_categories' );
 }
 add_action( 'edit_category', 'bootstrapfast_category_transient_flusher' );
-add_action( 'save_post',     'bootstrapfast_category_transient_flusher' );
+add_action( 'save_post', 'bootstrapfast_category_transient_flusher' );

@@ -91,10 +91,21 @@ function bootstrapfast_content_width() {
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function bootstrapfast_widgets_init() {
+
 	register_sidebar( array(
 		'name'          => esc_html__( 'Main Sidebar', 'bootstrapfast' ),
 		'id'            => 'main-sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'bootstrapfast' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Top Sidebar', 'bootstrapfast' ),
+		'id'            => 'top-sidebar-1',
+		'description'   => esc_html__( 'Header widgets here.', 'bootstrapfast' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
