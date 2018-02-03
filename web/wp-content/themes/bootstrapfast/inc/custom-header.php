@@ -71,9 +71,18 @@ endif;
  */
 function bootstrapfast_customizer_css() {
 	?>
-	<style type="text/css">
+	<style type="text/css" id="customizerinlinecss">
 		header#masthead {
-			background-color: <?php echo esc_attr( get_theme_mod( 'mainheader_background', '#565656' ) ); ?>;
+			background-color: <?php	echo esc_attr( get_theme_mod( 'mainheader_background', '#565656' ) ) . ';'; ?>
+			<?php
+			if ( true === get_theme_mod( 'headersticky' ) ) {
+				?>
+					position: sticky;
+					top: 0;
+					z-index: 1000;
+				<?php
+			}
+			?>
 		}
 		.main-navigation a {
 			color: <?php echo esc_attr( get_theme_mod( 'navlink_color', '#fff' ) ); ?>;

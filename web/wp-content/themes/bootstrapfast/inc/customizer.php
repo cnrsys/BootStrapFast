@@ -94,10 +94,21 @@ if ( ! function_exists( 'bootstrapfast_theme_customize_register' ) ) {
 			)
 		);
 
+		$wp_customize->add_setting( 'headersticky', array(
+			'default'   => true,
+			'transport' => 'refresh',
+		) );
+
+		$wp_customize->add_control( 'headersticky', array(
+			'label'   => __( 'Sticky Header' ),
+			'section' => 'bootstrapfast_theme_layout_options',
+			'type'    => 'checkbox',
+		) );
+
 		$wp_customize->add_setting( 'mainheader_background', array(
-			'default'    => '#565656',
-			'type'       => 'theme_mod',
-			'transfport' => 'refresh',
+			'default'   => '#565656',
+			'type'      => 'theme_mod',
+			'transport' => 'refresh',
 		) );
 
 		$wp_customize->add_control(
@@ -113,9 +124,9 @@ if ( ! function_exists( 'bootstrapfast_theme_customize_register' ) ) {
 		);
 
 		$wp_customize->add_setting( 'navlink_color', array(
-			'default'    => '#fff',
-			'type'       => 'theme_mod',
-			'transfport' => 'refresh',
+			'default'   => '#fff',
+			'type'      => 'theme_mod',
+			'transport' => 'refresh',
 		) );
 
 		$wp_customize->add_control(
