@@ -20,3 +20,14 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+article {
+	.entry-footer {
+		span {
+			padding: .5em;
+		}
+	}
+	footer {
+		text-align: left;
+	}
+}
