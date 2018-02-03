@@ -85,9 +85,9 @@ if ( ! function_exists( 'bootstrapfast_theme_customize_register' ) ) {
 					'settings'    => 'bootstrapfast_mainheader_position',
 					'type'        => 'select',
 					'choices'     => array(
-						'left'	  => __( 'Left', 'bootstrapfast' ),
-						'right'   => __( 'Right', 'bootstrapfast' ),
-						'top' 	  => __( 'Top', 'bootstrapfast' ),
+						'left'  => __( 'Left', 'bootstrapfast' ),
+						'right' => __( 'Right', 'bootstrapfast' ),
+						'top'   => __( 'Top', 'bootstrapfast' ),
 					),
 					'priority'    => '20',
 				)
@@ -95,37 +95,37 @@ if ( ! function_exists( 'bootstrapfast_theme_customize_register' ) ) {
 		);
 
 		$wp_customize->add_setting( 'mainheader_background', array(
-			'default'           => '#565656',
-			'type'              => 'theme_mod',
-			'transfport'        => 'refresh'
+			'default'    => '#565656',
+			'type'       => 'theme_mod',
+			'transfport' => 'refresh',
 		) );
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'site_title_color', array(
-					'label'       => __( 'Main Header Background Color', 'bootstrapfast' ),
-					'section'     => 'colors',
-					'settings'    => 'mainheader_background',
-					'priority'    => '30'
+					'label'    => __( 'Main Header Background Color', 'bootstrapfast' ),
+					'section'  => 'colors',
+					'settings' => 'mainheader_background',
+					'priority' => '30',
 				)
 			)
 		);
 
 		$wp_customize->add_setting( 'navlink_color', array(
-			'default'           => '#fff',
-			'type'              => 'theme_mod',
-			'transfport'        => 'refresh'
+			'default'    => '#fff',
+			'type'       => 'theme_mod',
+			'transfport' => 'refresh',
 		) );
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				'nav_link_color', array(
-					'label'       => __( 'Navigation Link Color', 'bootstrapfast' ),
-					'section'     => 'colors',
-					'settings'    => 'navlink_color',
-					'priority'    => '31'
+					'label'    => __( 'Navigation Link Color', 'bootstrapfast' ),
+					'section'  => 'colors',
+					'settings' => 'navlink_color',
+					'priority' => '31',
 				)
 			)
 		);
@@ -191,20 +191,25 @@ function bootstrapfast_main_sidebar_placement() {
 
 /**
  * Sanitize bootstrap container type.
+ *
+ * @param string $containertype Contains the value of the container type.
  */
 function bootstrapfast_container_type_sanitize( $containertype ) {
-    if ( ! in_array( $containertype, array( 'container-fluid', 'container' ) ) ) {
-        $containertype = 'container-fluid';
-    }
-    return $containertype;
+	if ( ! in_array( $containertype, array( 'container-fluid', 'container' ), true ) ) {
+		$containertype = 'container-fluid';
+	}
+	return $containertype;
 }
+
 
 /**
  * Sanitize bootstrap header position.
+ *
+ * @param string $headerposition Specifies the location of the header.
  */
 function bootstrapfast_mainheader_position_sanitize( $headerposition ) {
-    if ( ! in_array( $headerposition, array( 'left', 'right', 'top' ) ) ) {
-        $headerposition = 'left';
-    }
-    return $headerposition;
+	if ( ! in_array( $headerposition, array( 'left', 'right', 'top' ), true ) ) {
+		$headerposition = 'left';
+	}
+	return $headerposition;
 }
