@@ -105,3 +105,24 @@
 		width: 50%;
 	}
 }
+
+/* Menu placed on left / right */
+.left-head {
+
+	nav {
+
+		.menu > ul > li {
+			display: block;
+			width: 100%;
+
+			.children {
+				position: relative;
+				left: 1em;
+				box-shadow: none;
+			}
+
+		}
+
+	}
+
+}
