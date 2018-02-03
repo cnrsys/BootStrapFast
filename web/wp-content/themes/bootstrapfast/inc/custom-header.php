@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function bootstrapfast_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'bootstrapfast_custom_header_args', array(
 		'default-image'      => '',
-		'default-text-color' => '000000',
+		'default-text-color' => 'ffffff',
 		'width'              => 1000,
 		'height'             => 250,
 		'flex-height'        => true,
@@ -65,3 +65,18 @@ if ( ! function_exists( 'bootstrapfast_header_style' ) ) :
 		<?php
 	}
 endif;
+
+function bootstrapfast_customizer_css()
+{
+	?>
+	<style type="text/css">
+		header#masthead {
+			background-color: <?php echo get_theme_mod('mainheader_background', '#565656'); ?>;
+		}
+		.main-navigation a {
+			color: <?php echo get_theme_mod('navlink_color', '#fff'); ?>;
+		}
+	</style>
+	<?php
+}
+add_action( 'wp_head', 'bootstrapfast_customizer_css');

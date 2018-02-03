@@ -59,14 +59,20 @@
 	}
 
 	a {
+		color: $color_header_sitetitle;
 		display: block;
 		text-decoration: none;
+		padding: .5em .7em;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+	}
+
+	.children {
+		background-color: $color_header_nav_background;
 	}
 }
 
@@ -106,7 +112,7 @@
 	}
 }
 
-/* Menu placed on left / right */
+/* Menu placed on left or right */
 .left-head {
 
 	nav {
@@ -116,13 +122,19 @@
 			width: 100%;
 
 			.children {
-				position: relative;
-				left: 1em;
 				box-shadow: none;
+				left: 1em;
+				position: relative;
 			}
 
 		}
 
 	}
 
+}
+
+.site-title {
+	a {
+		color: $color_header_sitetitle;
+	}
 }

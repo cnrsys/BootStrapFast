@@ -21,7 +21,7 @@ add_action( 'customize_register', 'bootstrapfast_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function bootstrapfast_customize_preview_js() {
-	wp_enqueue_script( 'bootstrapfast_customizer', get_template_directory_uri() . '/assets/admin/js/customizer.js', array( 'customize-preview' ), '20170101', true );
+	wp_enqueue_script( 'bootstrapfast_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20170101', true );
 }
 add_action( 'customize_preview_init', 'bootstrapfast_customize_preview_js' );
 
@@ -68,7 +68,7 @@ if ( ! function_exists( 'bootstrapfast_theme_customize_register' ) ) {
 		);
 
 		$wp_customize->add_setting( 'bootstrapfast_mainheader_position', array(
-			'default'           => 'left',
+			'default'           => 'top',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'bootstrapfast_mainheader_position_sanitize',
@@ -93,6 +93,43 @@ if ( ! function_exists( 'bootstrapfast_theme_customize_register' ) ) {
 				)
 			)
 		);
+
+		$wp_customize->add_setting( 'mainheader_background', array(
+			'default'           => '#565656',
+			'type'              => 'theme_mod',
+			'transfport'        => 'refresh'
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'site_title_color', array(
+					'label'       => __( 'Main Header Background Color', 'bootstrapfast' ),
+					'section'     => 'colors',
+					'settings'    => 'mainheader_background',
+					'priority'    => '30'
+				)
+			)
+		);
+
+		$wp_customize->add_setting( 'navlink_color', array(
+			'default'           => '#fff',
+			'type'              => 'theme_mod',
+			'transfport'        => 'refresh'
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'nav_link_color', array(
+					'label'       => __( 'Navigation Link Color', 'bootstrapfast' ),
+					'section'     => 'colors',
+					'settings'    => 'navlink_color',
+					'priority'    => '31'
+				)
+			)
+		);
+
 	}
 }
 
