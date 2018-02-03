@@ -94,7 +94,7 @@
       "./vendor/bin/phpcs --config-set installed_paths ~/example_wordpress_composer/vendor/wp-coding-standards/wpcs/",
       "./vendor/bin/phpcs --version",
       "./vendor/bin/phpcs -i",
-      "./vendor/bin/phpcs --ignore=*/src/*,*/inc/*,*gulpfile.js*,*/assets/* --standard=WordPress ./web/wp-content/themes"
+      "./vendor/bin/phpcs --ignore=*/assets/* --standard=WordPress ./web/wp-content/themes/bootstrapfast"
     ],
     "unit-test": [
       "./vendor/bin/phpunit tests/unit/*"
