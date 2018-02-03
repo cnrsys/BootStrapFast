@@ -21,7 +21,7 @@
 		<div class="row">
 			<header id="masthead" class="container site-header col-xs-12 <?php echo esc_attr( bootstrapfast_main_header_style() ); ?>" role="banner">
 				<div class="row">
-					<div class="site-branding col-6">
+					<div class="site-branding col-md-6">
 						<?php
 						if ( bootstrapfast_get_the_logo_url() ) {
 							?>

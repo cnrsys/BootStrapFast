@@ -7,6 +7,18 @@
 	}
 }
 
+header {
+	.widget {
+		margin: 0 0 1.5em;
+		padding-top: 1.5em;
+
+		form {
+			float: right;
+		}
+	}
+}
+
+
 .site-title {
 	a {
 		color: $color_header_sitetitle;
