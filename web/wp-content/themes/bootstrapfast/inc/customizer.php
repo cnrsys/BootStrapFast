@@ -95,9 +95,10 @@ if ( ! function_exists( 'bootstrapfast_theme_customize_register' ) ) {
 		);
 
 		$wp_customize->add_setting( 'bootstrapfast_sidebar_position', array(
-			'default'    => 'left',
-			'type'       => 'theme_mod',
-			'capability' => 'edit_theme_options',
+			'default'           => 'left',
+			'type'              => 'theme_mod',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'bootstrapfast_sidebar_position_sanitize',
 		) );
 
 		$wp_customize->add_control(
@@ -121,20 +122,22 @@ if ( ! function_exists( 'bootstrapfast_theme_customize_register' ) ) {
 		);
 
 		$wp_customize->add_setting( 'headersticky', array(
-			'default'   => true,
-			'transport' => 'refresh',
+			'default'           => true,
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'headersticky_sanitize',
 		) );
 
 		$wp_customize->add_control( 'headersticky', array(
-			'label'   => __( 'Sticky Header' ),
+			'label'   => __( 'Sticky Header', 'bootstrapfast' ),
 			'section' => 'bootstrapfast_theme_layout_options',
 			'type'    => 'checkbox',
 		) );
 
 		$wp_customize->add_setting( 'mainheader_background', array(
-			'default'   => '#565656',
-			'type'      => 'theme_mod',
-			'transport' => 'refresh',
+			'default'           => '#565656',
+			'type'              => 'theme_mod',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'mainheader_background_sanitize',
 		) );
 
 		$wp_customize->add_control(
@@ -150,9 +153,10 @@ if ( ! function_exists( 'bootstrapfast_theme_customize_register' ) ) {
 		);
 
 		$wp_customize->add_setting( 'navlink_color', array(
-			'default'   => '#fff',
-			'type'      => 'theme_mod',
-			'transport' => 'refresh',
+			'default'           => '#fff',
+			'type'              => 'theme_mod',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'mainheader_background_sanitize',
 		) );
 
 		$wp_customize->add_control(
@@ -169,7 +173,6 @@ if ( ! function_exists( 'bootstrapfast_theme_customize_register' ) ) {
 
 	}
 }
-
 add_action( 'customize_register', 'bootstrapfast_theme_customize_register' );
 
 /**
@@ -252,6 +255,39 @@ function bootstrapfast_container_type_sanitize( $containertype ) {
 	return $containertype;
 }
 
+/**
+ * Sanitize headersticky value.
+ *
+ * @param boolean $headerstickyvalue Sanitize headersticky value.
+ */
+function headersticky_sanitize( $headerstickyvalue ) {
+	if ( $headerstickyvalue ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
+ * Sanitize background value.
+ *
+ * @param boolean $mainheader_background_value Sanitize background value.
+ */
+function mainheader_background_sanitize( $mainheader_background_value ) {
+	return esc_attr( $mainheader_background_value );
+}
+
+/**
+ * Sanitize sidebar position type.
+ *
+ * @param string $sidebarposition Contains the value sidebar position.
+ */
+function bootstrapfast_sidebar_position_sanitize( $sidebarposition ) {
+	if ( ! in_array( $sidebarposition, array( 'left', 'right', 'bottom' ), true ) ) {
+		$sidebarposition = 'left';
+	}
+	return $sidebarposition;
+}
 
 /**
  * Sanitize bootstrap header position.
