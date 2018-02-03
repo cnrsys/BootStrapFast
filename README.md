@@ -32,8 +32,14 @@
 1) Update composer.json
 2) lando composer update
 
-## Theme test data
+## Theme test data sources if you need to reset dummy data for testing
 
+You need to activate plugin
+
+### Option 1
 From https://codex.wordpress.org/Theme_Unit_Test
 
 https://raw.githubusercontent.com/WPTRT/theme-unit-test/master/themeunittestdata.wordpress.xml
+
+### Option 2
+From https://github.com/poststatus/wptest
