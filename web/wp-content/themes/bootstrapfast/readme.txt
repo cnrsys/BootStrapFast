@@ -4,8 +4,8 @@ Contributors: carl-alberto
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, flexible-header, custom-logo, featured-image-header, featured-images, sticky-post, theme-options, blog, news
 
 Requires at least: 4.0
-Tested up to: 4.9
-Stable tag: 1.0.4
+Tested up to: 4.9.2
+Stable tag: 1.0.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -62,6 +62,13 @@ It should be but not fully tested, use at your own risk.
 * Improved the minification of styles and js
 * Added svg support for social media icons
 * Added gulp to the raw theme package
+
+= 1.0.5 - Feb 4 2018 =
+* Added sass uncompiled stylesheet
+* Improved header & sidebar placing
+* Added more customizer options for background color
+* Added sticky header option
+* Added responsive styles for menu
 
 == Copyright ==
 
