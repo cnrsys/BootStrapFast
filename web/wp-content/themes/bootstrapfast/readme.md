@@ -13,7 +13,7 @@ Tools included in this repo is used to revise and update the theme.
 3) Run npm install -g npm@latest
 4) Run npm install -g gulp bower
 5) Run npm install
-6) Run bower 
+6) Run bower
 
 # Release branch
 - Only the released files used for template file for Theme submission
@@ -40,6 +40,8 @@ https://themes.trac.wordpress.org/ticket/40027
 https://themes.trac.wordpress.org/ticket/42772
 1.0.3
 https://themes.trac.wordpress.org/ticket/47164
+1.0.4
+https://themes.trac.wordpress.org/ticket/49712
 
 # Exporting theme for utilization
 
