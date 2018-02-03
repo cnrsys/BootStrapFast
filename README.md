@@ -14,14 +14,14 @@
 5) CircleCI token
 6) Node Version Manager & NodeJS
 
-## Local setup to copy the
+## Local initial setup
 
 1) Git clone this repo
 2) lando start
 3) lando terminus auth:login --machine-token=
 4) lando pull --code=none --files=none --database=dev
 5) `cd web/wp-content/themes/bootstrapfast` then `gulp watch`
-6) ``. ~/.nvm/nvm.sh` and `nvm use 8`
+6) . ~/.nvm/nvm.sh` and `nvm use 8`
 7) Run npm install -g npm@latest
 8) Run npm install -g gulp bower
 9) Run npm install
@@ -31,3 +31,9 @@
 
 1) Update composer.json
 2) lando composer update
+
+## Theme test data
+
+From https://codex.wordpress.org/Theme_Unit_Test
+
+https://raw.githubusercontent.com/WPTRT/theme-unit-test/master/themeunittestdata.wordpress.xml
