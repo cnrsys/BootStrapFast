@@ -11,11 +11,6 @@
 			</div><!-- #contennt -->
 		</div><!-- .row -->
 	</div><!-- .container -->
-	<?php
-	if ( ! bootstrapfast_main_sidebar_placement() ) {
-			get_sidebar();
-	}
-	?>
 	<footer id="colophon" class="site-footer <?php echo esc_attr( bootstrapfast_container_type() ); ?>" role="contentinfo">
 		<div class="row">
 			<div class="col-md-12">

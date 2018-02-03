@@ -94,6 +94,32 @@ if ( ! function_exists( 'bootstrapfast_theme_customize_register' ) ) {
 			)
 		);
 
+		$wp_customize->add_setting( 'bootstrapfast_sidebar_position', array(
+			'default'    => 'left',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'bootstrapfast_sidebar_position', array(
+					'label'       => __( 'Main Sidebar Positioning', 'bootstrapfast' ),
+					'description' => __( 'Sidebar can be from the left, right or bottom',
+					'bootstrapfast' ),
+					'section'     => 'bootstrapfast_theme_layout_options',
+					'settings'    => 'bootstrapfast_sidebar_position',
+					'type'        => 'select',
+					'choices'     => array(
+						'left'   => __( 'Left', 'bootstrapfast' ),
+						'right'  => __( 'Right', 'bootstrapfast' ),
+						'bottom' => __( 'Bottom', 'bootstrapfast' ),
+					),
+					'priority'    => '21',
+				)
+			)
+		);
+
 		$wp_customize->add_setting( 'headersticky', array(
 			'default'   => true,
 			'transport' => 'refresh',
@@ -183,6 +209,20 @@ function bootstrapfast_container_type() {
 		return 'container';
 	} else {
 		return 'container-fluid';
+	}
+}
+
+/**
+ * Primary Sidebar placement.
+ */
+function bootstrapfast_primary_sidebar_placement() {
+	$maincontainer = get_theme_mod( 'bootstrapfast_sidebar_position' );
+	if ( 'left' === $maincontainer ) {
+		return true;
+	} elseif ( 'right' === $maincontainer ) {
+		return true;
+	} else {
+		return false;
 	}
 }
 

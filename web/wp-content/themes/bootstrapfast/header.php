@@ -65,4 +65,4 @@
 				?>
 			</header><!-- #masthead -->
 
-			<div id="content" class="site-content col-xs-12 <?php echo esc_attr( bootstrapfast_main_body_style() ); ?>">
+			<div id="content" class="container site-content col-xs-12 <?php echo esc_attr( bootstrapfast_main_body_style() ); ?>">
