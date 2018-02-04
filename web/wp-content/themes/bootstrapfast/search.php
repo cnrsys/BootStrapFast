@@ -8,44 +8,48 @@
  */
 
 get_header(); ?>
-
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+	<div class="row">
 		<?php
-		if ( have_posts() ) :
-			?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html( 'Search Results for: %s', 'bootstrapfast' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+		if ( ! bootstrapfast_main_sidebar_placement() ) {
+			get_sidebar();
+		}
+		?>
+		<section id="primary" class="content-area col">
+			<main id="main" class="site-main" role="main">
 
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			if ( have_posts() ) :
+				?>
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+				<header class="page-header">
+					<h1 class="page-title"><?php printf( esc_html( 'Search Results for: %s', 'bootstrapfast' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				</header><!-- .page-header -->
 
-			endwhile;
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-			the_posts_navigation();
+					/**
+					 * Run the loop for the search to output the results.
+					 * If you want to overload this in a child theme then include a file
+					 * called content-search.php and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', 'search' );
 
-		else :
+				endwhile;
 
-			get_template_part( 'template-parts/content', 'none' );
+				the_posts_navigation();
 
-		endif;
-			?>
+			else :
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+				get_template_part( 'template-parts/content', 'none' );
 
+			endif;
+				?>
+
+			</main><!-- #main -->
+		</section><!-- #primary -->
+	</div><!-- #row -->
 <?php
-get_sidebar();
 get_footer();
