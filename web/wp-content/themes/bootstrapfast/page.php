@@ -33,11 +33,6 @@ get_header(); ?>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->
-		<?php
-		if ( ! bootstrapfast_main_sidebar_placement() ) {
-			get_sidebar();
-		}
-		?>
 	</div><!-- #row -->
-	<?php
-	get_footer();
+<?php
+get_footer();
