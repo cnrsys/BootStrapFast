@@ -64,7 +64,7 @@
 						'menu_id'        => 'primary-menu',
 					));
 					?>
-				</nav><!-- #site-navigation -->				<?php // theme translation. ?>
+				</nav><!-- #site-navigation -->
 				<?php
 				if ( bootstrapfast_main_sidebar_placement() ) {
 						get_sidebar();
