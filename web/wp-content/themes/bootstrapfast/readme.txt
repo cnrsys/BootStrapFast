@@ -72,6 +72,7 @@ It should be but not fully tested, use at your own risk.
 
 = 1.0.6 - Feb 4 2018 =
 * added widget sidebar on 404, pages, single, archive and categories page
+* added footer widgets
 
 == Copyright ==
 
