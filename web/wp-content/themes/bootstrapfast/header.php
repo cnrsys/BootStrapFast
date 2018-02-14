@@ -64,12 +64,7 @@
 						'menu_id'        => 'primary-menu',
 					));
 					?>
-				</nav><!-- #site-navigation -->				<?php // theme translation. ?>
-				<?php
-				if ( bootstrapfast_main_sidebar_placement() ) {
-						get_sidebar();
-				}
-				?>
+				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
 			<div id="content" class="container site-content col-xs-12 <?php echo esc_attr( bootstrapfast_main_body_style() ); ?>">

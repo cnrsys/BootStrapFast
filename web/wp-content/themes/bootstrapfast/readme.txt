@@ -5,7 +5,7 @@ Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, c
 
 Requires at least: 4.0
 Tested up to: 4.9.2
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -69,6 +69,10 @@ It should be but not fully tested, use at your own risk.
 * Added more customizer options for background color
 * Added sticky header option
 * Added responsive styles for menu
+
+= 1.0.6 - Feb 4 2018 =
+* added widget sidebar on 404, pages, single, archive and categories page
+* added footer widgets
 
 == Copyright ==
 
